@@ -1,7 +1,5 @@
 package Primes;
 
-import java.math.BigInteger;
-
 public class PrimeJava {
     public static boolean isPrime(Long a)
     {
@@ -39,20 +37,15 @@ public class PrimeJava {
     public static String primelist(int veg)
     {
         Long prim = 1L;
-        Long [] eredmeny = new Long[veg];
+        StringBuilder build = new StringBuilder();
         for (ciklus = 0; ciklus < veg;)
         {
             if (isPrime(prim))
             {
-                eredmeny[ciklus] = prim;
+                build.append(prim+"\r\n");
                 ciklus++;
             }
             prim++;
-        }
-        StringBuilder build = new StringBuilder();
-        for (int i=0; i<eredmeny.length;i++)
-        {
-            build.append(eredmeny[i]+"\r\n");
         }
         return build.toString();
     }

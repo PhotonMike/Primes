@@ -41,21 +41,16 @@ class PrimeKotlin {
         fun primelist(veg: Int):String
         {
             var prim = 1L
-            var eredmeny = arrayOfNulls<Long>(veg)
+            var build = StringBuilder()
             ciklus=0
             while(ciklus<veg)
             {
                 if (isPrime(prim))
                 {
-                    eredmeny[ciklus]=prim
+                    build.append(prim.toString()+"\r\n")
                     ciklus++
                 }
                 prim++
-            }
-            var build = StringBuilder()
-            for (i in eredmeny.indices)
-            {
-                build.append(eredmeny[i].toString()+"\r\n")
             }
             return build.toString()
         }
